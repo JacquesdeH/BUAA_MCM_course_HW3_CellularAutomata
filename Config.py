@@ -4,8 +4,6 @@
 # Project Name: project
 # File        : Config.py
 # --------------------------------------------------
-import random
-
 
 class Config:
     SEED = 7
