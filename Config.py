@@ -4,6 +4,12 @@
 # Project Name: project
 # File        : Config.py
 # --------------------------------------------------
+import random
+
 
 class Config:
+    SEED = 7
+
     RateHeal = 0.2
+    RateInfectByEach = 0.2
+    RateIncubToSick = 0.3
