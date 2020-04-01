@@ -135,6 +135,32 @@ class MainGraph:
                 res[i][j] = lst[0].status.value
         return res
 
+    def count(self):
+        dct = {}
+        healthyCount = 0
+        incubCount = 0
+        sickCount = 0
+        immuneCount = 0
+        for i in range(self.n):
+            for j in range(self.n):
+                lst = self.Graph[i][j]
+                if lst == None:
+                    continue
+                for person in lst:
+                    if person.status == Status.HEALTHY:
+                        healthyCount += 1
+                    elif person.status == Status.INCUB:
+                        incubCount += 1
+                    elif person.status == Status.SICK:
+                        sickCount += 1
+                    elif person.status == Status.IMMUNE:
+                        immuneCount += 1
+        dct[Status.HEALTHY] = healthyCount
+        dct[Status.INCUB] = incubCount
+        dct[Status.SICK] = sickCount
+        dct[Status.IMMUNE] = immuneCount
+        return dct
+    
 def test():
     Map = [[0,-1,0],[0,0,0],[-1,0,-1]]
     g = MainGraph(3,Map)
@@ -165,3 +191,7 @@ def test():
         print(g.Graph)
         print(g.graphToMap())
         print("----------")
+        print("count graph")
+        print(g.count())
+        print("----------")
+        
