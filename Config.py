@@ -16,7 +16,8 @@ class Config:
     N_COLUMN = 101
 
     RateHeal = 0.3
-    RateInfectByEach = 0.3
+    RateInfectBySICK = 0.3
+    RateInfectByINCUB = 0.3
     RateIncubToSick = 0.1
     RateDeath = 0.1
 

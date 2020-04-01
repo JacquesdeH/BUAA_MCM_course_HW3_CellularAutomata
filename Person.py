@@ -42,7 +42,8 @@ class Person:
             for neighbor in neighbors:
                 if self.status == Status.INCUB:
                     break
-                if infectious(neighbor.status) and random.random() < Config.RateInfectByEach:
+                if neighbor.status == Status.INCUB and random.random() < Config.RateInfectByINCUB \
+                        or neighbor.status == Status.SICK and random.random() < Config.RateInfectBySICK:
                     self.status = Status.INCUB
         # dead
         elif self.status == Status.NULL:
