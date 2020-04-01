@@ -9,15 +9,15 @@ class Config:
     SEED = 7
 
     T = 0.01  # refresh period
-    TotalRefreshCnt = 1000  # cnt of simulation lasting
+    TotalRefreshCnt = 500  # cnt of simulation lasting
     # total simulation time = T * TotalRefreshCnt
 
     N_ROW = 276
     N_COLUMN = 168
 
-    RateHeal = 0.2
-    RateInfectByEach = 0.2
-    RateIncubToSick = 0.3
+    RateHeal = 0.3
+    RateInfectByEach = 0.3
+    RateIncubToSick = 0.4
     RateDeath = 0.1
 
-    Population = 500
+    Population = 1000

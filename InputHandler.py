@@ -17,7 +17,7 @@ class InputHandler:
                     result[i, j] = 0
                 else:
                     result[i, j] = -1
-        result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=-1)
+        # result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=-1)
         return result.tolist()
 
 
