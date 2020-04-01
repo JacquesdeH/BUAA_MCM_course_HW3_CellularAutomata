@@ -5,11 +5,14 @@
 # File        : Main.py
 # --------------------------------------------------
 import random
+import time
+
 import numpy as np
 
 from Config import Config
 from Graph import Graph
 from InputHandler import InputHandler
+from LineChart import LineChart
 
 
 def initGraph(Map):
@@ -24,8 +27,9 @@ if __name__ == '__main__':
     np.random.seed(Config.SEED)
 
     inputHandler = InputHandler()
-    Map = inputHandler.getMap()
+    lineChart = LineChart()
 
+    Map = inputHandler.getMap()
     graph = initGraph(Map)
     timeSeq = []
 
@@ -35,5 +39,6 @@ if __name__ == '__main__':
         timeSeq.append(graph.count())
         curMap = graph.graphToMap()
         # TODO: print curMap to OutputHandler
+        time.sleep(Config.T)
 
-    # TODO: print timeSeqto OutputHandler
+    lineChart.drawLineChart(timeSeq)
