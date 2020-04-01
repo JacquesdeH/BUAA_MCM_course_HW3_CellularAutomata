@@ -12,8 +12,8 @@ class Config:
     TotalRefreshCnt = 1000  # cnt of simulation lasting
     # total simulation time = T * TotalRefreshCnt
 
-    N_ROW = 615
-    N_COLUMN = 615
+    N_ROW = 276
+    N_COLUMN = 168
 
     RateHeal = 0.2
     RateInfectByEach = 0.2
