@@ -8,6 +8,8 @@
 class Config:
     SEED = 7
 
+    T = 0.2  # refresh period
+
     RateHeal = 0.2
     RateInfectByEach = 0.2
     RateIncubToSick = 0.3
