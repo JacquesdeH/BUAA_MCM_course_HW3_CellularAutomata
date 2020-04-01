@@ -20,11 +20,13 @@ class InputHandler:
         result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=0)
         return result.tolist()
 
-inputHandler = InputHandler()
 
-result = inputHandler.getMap()
+if __name__ == '__main__':
+    inputHandler = InputHandler()
 
-plt.figure("map")
-plt.imshow(result)
-plt.axis('off')
-plt.show()
+    result = inputHandler.getMap()
+
+    plt.figure("map")
+    plt.imshow(result)
+    plt.axis('off')
+    plt.show()
