@@ -1,7 +1,7 @@
 import random
 from Person import Person
 from Status import Status
-class MainGraph:
+class Graph:
     def __init__(self, n, Map):
         self.n = n
         self.Map = Map
@@ -163,7 +163,7 @@ class MainGraph:
     
 def test():
     Map = [[0,-1,0],[0,0,0],[-1,0,-1]]
-    g = MainGraph(3,Map)
+    g = Graph(3, Map)
     #print(g.Map)
     print("----------")
     print("initialize the graph with [] and None")
