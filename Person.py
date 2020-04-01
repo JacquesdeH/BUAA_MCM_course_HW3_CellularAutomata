@@ -40,7 +40,7 @@ class Person:
             for neighbor in neighbors:
                 if self.status == Status.INCUB:
                     break
-                if infectious(neighbor.status) and random.random < Config.RateInfectByEach:
+                if infectious(neighbor.status) and random.random() < Config.RateInfectByEach:
                     self.status = Status.INCUB
         # illegal status
         else:
