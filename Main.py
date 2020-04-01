@@ -13,7 +13,7 @@ from InputHandler import InputHandler
 
 
 def initGraph(Map):
-    graph = Graph(Map)
+    graph = Graph(Config.N, Map)
     graph.addPopulation(Config.Population)
     graph.randomInfection()
     return graph
