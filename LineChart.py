@@ -32,22 +32,23 @@ class LineChart():
             sick.append(target[i][Status.SICK])
             immune.append(target[i][Status.IMMUNE])
 
-        plt.plot(time, healthy)
-        plt.plot(time, incub)
-        plt.plot(time, sick)
-        plt.plot(time, immune)
+        plt.plot(time, healthy,label = 'healthy',color='green')
+        plt.plot(time, incub,label = 'incub',color='gold')
+        plt.plot(time, sick,label = 'sick',color='red')
+        plt.plot(time, immune,label = 'immune',color='dodgerblue')
 
-        plt.title('line chart')
-        plt.xlabel('x')
-        plt.ylabel('y')
+        plt.title('各状态人数随时间变化图')
+        plt.xlabel('Time')
+        plt.ylabel('Number of People')
 
+        plt.legend()
         plt.show()
 
 
 if __name__ == '__main__':
     lineChart = LineChart()
 
-    one = {Status.HEALTHY: 10, Status.INCUB: 0, Status.SICK: 10, Status.IMMUNE: 5}
+    one = {Status.HEALTHY: 5, Status.INCUB: 0, Status.SICK: 10, Status.IMMUNE: 5}
     two = {Status.HEALTHY: 5, Status.INCUB: 5, Status.SICK: 5, Status.IMMUNE: 5}
     three = {Status.HEALTHY: 2, Status.INCUB: 2, Status.SICK: 2, Status.IMMUNE: 2}
     four = {Status.HEALTHY: 3, Status.INCUB: 4, Status.SICK: 5, Status.IMMUNE: 6}
