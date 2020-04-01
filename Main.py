@@ -13,6 +13,7 @@ from Config import Config
 from Graph import Graph
 from InputHandler import InputHandler
 from LineChart import LineChart
+from MapDisplayer import MapDisplayer
 
 
 def initGraph(Map):
@@ -28,6 +29,7 @@ if __name__ == '__main__':
 
     inputHandler = InputHandler()
     lineChart = LineChart()
+    mapDisplayer = MapDisplayer()
 
     Map = inputHandler.getMap()
     graph = initGraph(Map)
@@ -39,7 +41,7 @@ if __name__ == '__main__':
         graph.randomInfection()
         timeSeq.append(graph.count())
         curMap = graph.graphToMap()
-        # TODO: print curMap to OutputHandler
-        time.sleep(Config.T)
+        mapDisplayer.drawMap(curMap, Config.T)
+        # time.sleep(Config.T)
 
     lineChart.drawLineChart(timeSeq)
