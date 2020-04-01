@@ -34,6 +34,7 @@ if __name__ == '__main__':
     timeSeq = []
 
     for i in range(Config.TotalRefreshCnt):
+        print("On Period "+str(i+1))
         graph.randomWalk()
         graph.randomInfection()
         timeSeq.append(graph.count())
