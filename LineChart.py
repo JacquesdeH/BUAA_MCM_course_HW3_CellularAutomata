@@ -1,4 +1,6 @@
+#-*-coding:utf-8-*-
 import numpy as np
+import matplotlib.font_manager
 import matplotlib.pyplot as plt
 from Config import Config
 from Status import Status
@@ -37,7 +39,7 @@ class LineChart():
         plt.plot(time, sick,label = 'sick',color='red')
         plt.plot(time, immune,label = 'immune',color='dodgerblue')
 
-        plt.title('各状态人数随时间变化图')
+        plt.title('Timeline of the spread of COVID-19 in Great Britain')
         plt.xlabel('Time')
         plt.ylabel('Number of People')
 
