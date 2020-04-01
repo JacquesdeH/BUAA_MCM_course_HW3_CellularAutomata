@@ -17,5 +17,6 @@ class Config:
     RateHeal = 0.2
     RateInfectByEach = 0.2
     RateIncubToSick = 0.3
+    RateDeath = 0.1
 
     Population = 500
