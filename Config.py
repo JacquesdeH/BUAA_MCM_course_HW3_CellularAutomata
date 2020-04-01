@@ -9,7 +9,7 @@ class Config:
     SEED = 7
 
     T = 0.01  # refresh period
-    TotalRefreshCnt = 500  # cnt of simulation lasting
+    TotalRefreshCnt = 300  # cnt of simulation lasting
     # total simulation time = T * TotalRefreshCnt
 
     N_ROW = 166
