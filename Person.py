@@ -31,6 +31,8 @@ class Person:
         elif self.status == Status.SICK:
             if random.random() < Config.RateHeal:
                 self.status = Status.IMMUNE
+            if random.random() < Config.RateDeath:
+                self.status = Status.NULL
         # incubation
         elif self.status == Status.INCUB:
             if random.random() < Config.RateIncubToSick:
@@ -42,6 +44,9 @@ class Person:
                     break
                 if infectious(neighbor.status) and random.random() < Config.RateInfectByEach:
                     self.status = Status.INCUB
+        # dead
+        elif self.status == Status.NULL:
+            raise ValueError("Dead body has not been dealt with")
         # illegal status
         else:
             raise RuntimeError("Encountered undefined status for Person")
