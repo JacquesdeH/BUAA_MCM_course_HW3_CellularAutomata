@@ -8,10 +8,10 @@ class Graph:
         tmpGraph = [[None for i in range(n)] for j in range(n)]
         for i in range(n):
             for j in range(n):
-                if Map[i][j] == 0 :
+                if Map[i][j] == 0:
                     tmpGraph[i][j] = []
-                else :
-                    tmp = None
+                else:
+                    tmpGraph[i][j] = None
         self.Graph = tmpGraph
     def getRandomLocation(self):
         while True:
