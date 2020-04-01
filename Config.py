@@ -8,11 +8,11 @@
 class Config:
     SEED = 7
 
-    T = 0.2  # refresh period
+    T = 0.01  # refresh period
     TotalRefreshCnt = 1000  # cnt of simulation lasting
     # total simulation time = T * TotalRefreshCnt
 
-    N = 300
+    N = 615
 
     RateHeal = 0.2
     RateInfectByEach = 0.2
