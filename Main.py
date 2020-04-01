@@ -17,7 +17,7 @@ from MapDisplayer import MapDisplayer
 
 
 def initGraph(Map):
-    graph = Graph(Config.N, Map)
+    graph = Graph(Config.N_ROW, Config.N_COLUMN, Map)
     graph.addPopulation(Config.Population)
     graph.randomInfection()
     return graph
