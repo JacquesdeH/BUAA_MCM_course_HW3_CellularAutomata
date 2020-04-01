@@ -39,7 +39,7 @@ if __name__ == '__main__':
         if i != 0 and i % 10 == 0:
             print("On Period " + str(i + 1))
         graph.randomWalk()
-        graph.randomInfection()
+        graph.stateTransfer()
         timeSeq.append(graph.count())
         curMap = graph.graphToMap()
         mapDisplayer.drawMap(curMap, Config.T)
