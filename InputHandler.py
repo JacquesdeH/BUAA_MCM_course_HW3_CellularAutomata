@@ -9,7 +9,7 @@ class InputHandler:
     def getMap(self):
         base = np.array([100, 100, 100])
         size = 15
-        img = np.array(Image.open('ukmap2.jpg'))
+        img = np.array(Image.open('ukmap4.jpg'))
         result = np.zeros((img.shape[0], img.shape[1]),dtype=int)
         for i in range(img.shape[0]):
             for j in range(img.shape[1]):
