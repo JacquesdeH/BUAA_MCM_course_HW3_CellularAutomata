@@ -14,10 +14,10 @@ class InputHandler:
         for i in range(img.shape[0]):
             for j in range(img.shape[1]):
                 if img[i, j, 0] - base[0] < 0:
-                    result[i, j] = 1
-                else:
                     result[i, j] = 0
-        result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=0)
+                else:
+                    result[i, j] = -1
+        result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=-1)
         return result.tolist()
 
 
