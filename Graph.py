@@ -100,6 +100,9 @@ class Graph:
                 if len(lst) == 0:
                     continue
                 for person in lst:
+                    if person.status==Status.NULL:
+                        lst.remove(person)
+                        continue
                     neighbour = self.getNeighbour(person,i,j)
                     #print(neighbour)
                     person.updateStatus(neighbour)
