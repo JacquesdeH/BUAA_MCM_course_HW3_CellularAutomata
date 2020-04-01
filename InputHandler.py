@@ -18,7 +18,6 @@ class InputHandler:
                 else:
                     result[i, j] = 0
         result = np.pad(result, ((0, 0), (86, 86)), "constant", constant_values=0)
-        print(result.dtype)
         return result.tolist()
 
 inputHandler = InputHandler()
