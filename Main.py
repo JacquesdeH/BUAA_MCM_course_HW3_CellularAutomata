@@ -31,6 +31,8 @@ if __name__ == '__main__':
     lineChart = LineChart()
     mapDisplayer = MapDisplayer()
 
+    curMapOn = input('Should I print online process? [y/n]') == 'y'
+
     Map = inputHandler.getMap()
     graph = initGraph(Map)
     timeSeq = []
@@ -42,7 +44,8 @@ if __name__ == '__main__':
         graph.stateTransfer()
         timeSeq.append(graph.count())
         curMap = graph.graphToMap()
-        mapDisplayer.drawMap(curMap, Config.T)
+        if curMapOn:
+            mapDisplayer.drawMap(curMap, Config.T)
         # time.sleep(Config.T)
 
     lineChart.drawLineChart(timeSeq)
