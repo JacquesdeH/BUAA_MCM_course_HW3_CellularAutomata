@@ -15,10 +15,10 @@ class Config:
     N_ROW = 166
     N_COLUMN = 101
 
-    RateHeal = 0.3
+    RateHeal = 0.1
     RateInfectBySICK = 0.3
     RateInfectByINCUB = 0.3
     RateIncubToSick = 0.1
-    RateDeath = 0.1
+    RateDeath = 0
 
     Population = 1000
