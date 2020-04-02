@@ -8,14 +8,17 @@ class Graph:
         self.column = column
         self.Map = Map
         self.cntDeath = 0
+        self.movableCnt = 0
         tmpGraph = [[None for i in range(column)] for j in range(row)]
         for i in range(row):
             for j in range(column):
                 if Map[i][j] == 0:
                     tmpGraph[i][j] = []
+                    self.movableCnt += 1
                 else:
                     tmpGraph[i][j] = None
         self.Graph = tmpGraph
+        print("Initialized Graph with movable positions of "+str(self.movableCnt))
 
     def getRandomLocation(self):
         while True:
