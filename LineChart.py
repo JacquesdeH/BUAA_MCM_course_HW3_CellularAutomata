@@ -28,16 +28,19 @@ class LineChart():
         incub = []
         sick = []
         immune = []
+        dead = []
         for i in range(len(target)):
             healthy.append(target[i][Status.HEALTHY])
             incub.append(target[i][Status.INCUB])
             sick.append(target[i][Status.SICK])
             immune.append(target[i][Status.IMMUNE])
+            dead.append(target[i][Status.NULL])
 
         plt.plot(time, healthy,label = 'healthy',color='green')
         plt.plot(time, incub,label = 'incub',color='gold')
         plt.plot(time, sick,label = 'sick',color='red')
         plt.plot(time, immune,label = 'immune',color='dodgerblue')
+        plt.plot(time, dead, label='death', color='black')
 
         plt.title('Timeline of the spread of COVID-19 in Great Britain')
         plt.xlabel('Time')

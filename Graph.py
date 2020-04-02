@@ -7,6 +7,7 @@ class Graph:
         self.row = row
         self.column = column
         self.Map = Map
+        self.cntDeath = 0
         tmpGraph = [[None for i in range(column)] for j in range(row)]
         for i in range(row):
             for j in range(column):
@@ -100,6 +101,7 @@ class Graph:
                 for person in lst:
                     if person.status == Status.NULL:
                         lst.remove(person)
+                        self.cntDeath += 1
                         continue
                     neighbour = self.getNeighbour(person, i, j)
                     # print(neighbour)
@@ -160,8 +162,10 @@ class Graph:
         dct[Status.INCUB] = incubCount
         dct[Status.SICK] = sickCount
         dct[Status.IMMUNE] = immuneCount
+        dct[Status.NULL] = self.cntDeath
         return dct
-    
+
+
 if __name__ == '__main__':
     Map = [[0,-1,0],[0,0,0],[-1,0,-1]]
     g = Graph(3, Map)
