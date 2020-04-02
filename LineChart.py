@@ -42,7 +42,7 @@ class LineChart():
         plt.plot(time, immune,label = 'immune',color='dodgerblue')
         plt.plot(time, dead, label='death', color='black')
 
-        plt.title('Timeline of the spread of COVID-19 in Great Britain')
+        plt.title('Timeline of the Spread of COVID-19 in Great Britain')
         plt.xlabel('Time')
         plt.ylabel('Number of People')
 
